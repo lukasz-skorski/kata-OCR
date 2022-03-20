@@ -1,0 +1,14 @@
+version: '3.4'
+
+volumes:
+  data: {}
+
+services:
+  php:
+    hostname: kata-rekrutacja
+    container_name: kata-rekrutacja
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile
+    volumes:
+      - ./:/var/www/html
